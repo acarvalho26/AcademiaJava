@@ -6,11 +6,11 @@ import java.sql.DriverManager;
 public class ConexaoTeste {
 
 	private String caminho = "localhost";
-	private String porta = "3306";
-//	\/ AQUI … NECESS¡RIO MUDAR O NOME DO SCHEMA QUE VOC  VAI QUERER ACESSAR / ADICIONAR \/
+	private String porta = "root";
+//	\/ AQUI √â NECESS√ÅRIO MUDAR O NOME DO SCHEMA QUE VOC√ä VAI QUERER ACESSAR / ADICIONAR \/
 	private String nome = "filme";
 	private String usuario = "root";
-	private String senha = "Xemgh!02";
+	private String senha = "root";
 
 	private String URL = "jdbc:mysql://" + caminho + ":" + porta + "/" + nome + "?autoReconnect=true&useSSL=false";
 
@@ -33,7 +33,7 @@ public class ConexaoTeste {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection cn = DriverManager.getConnection(URL, usuario, senha);
-			System.out.println("conex„o estabelecida");
+			System.out.println("conex√£o estabelecida");
 			return cn;
 
 		} catch (Exception e) {
